@@ -1,10 +1,12 @@
 {
   "name": "alt---test-technique-jour-6",
   "version": "1.0.0",
+  "type": "module",
   "description": "ALT's technical test day 6",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo No testing framework specified && exit 0"
+    "test": "echo No testing framework specified && exit 0",
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
