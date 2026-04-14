@@ -1,44 +1,11 @@
 import { createInstances } from './services/index.js';
 import { sortSamplesByPriority } from './services/index.js';
-
-// Hardcoded input for testing purposes
-const input = {
-  'samples': [
-    {
-      'id': 'S001',
-      'type': 'BLOOD',
-      'priority': 'URGENT',
-      'analysisTime': 30,
-      'arrivalTime': '09:00',
-      'patientId': 'P001'
-    },
-    {
-      'id': 'S001',
-      'type': 'BLOOD',
-      'priority': 'STAT',
-      'analysisTime': 30,
-      'arrivalTime': '09:00',
-      'patientId': 'P001'
-    }
-  ],
-  'technicians': [
-    {
-      'id': 'T001',
-      'name': 'Alice Martin',
-      'speciality': 'BLOOD',
-      'startTime': '08:00',
-      'endTime': '17:00'
-    }
-  ],
-  'equipment': [
-    {
-      'id': 'E001',
-      'name': 'Analyseur Sang A',
-      'type': 'BLOOD',
-      'available': true
-    }
-  ]
-};
+import input1 from './fixtures/input1.json' with { type: 'json' };
+import input2 from './fixtures/input2.json' with { type: 'json' };
+import input3 from './fixtures/input3.json' with { type: 'json' };
+import expectedOutput1 from './fixtures/output1.json' with { type: 'json' };
+import expectedOutput2 from './fixtures/output2.json' with { type: 'json' };
+import expectedOutput3 from './fixtures/output3.json' with { type: 'json' };
 
 const run = (data) => {
   const [samples, technicians, equipment] = createInstances(data);
@@ -50,4 +17,7 @@ const run = (data) => {
   return {};
 };
 
-console.log(run(input));
+// TODO: compare actual output to expected output
+console.log(run(input1));
+console.log(run(input2));
+console.log(run(input3));
